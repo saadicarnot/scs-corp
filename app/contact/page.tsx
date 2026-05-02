@@ -81,7 +81,7 @@ export default function ContactPage() {
       <JsonLd data={faqSchema} />
       <JsonLd data={breadcrumbs} />
       {/* Hero */}
-      <section className="relative py-24 lg:py-32 gradient-navy noise-overlay">
+      <section className="relative py-24 lg:py-32 bg-navy z-10 shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)]">
         <div className="container-wide relative z-10 text-center max-w-3xl mx-auto">
           <p className="text-eyebrow text-accent-blue mb-4">Contact Us</p>
           <h1 className="text-page-title text-white mb-5">Get in Touch</h1>
@@ -89,7 +89,6 @@ export default function ContactPage() {
             Tell us about your property, your project, or your problem. We&apos;ll get back within one business day.
           </p>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-20" />
       </section>
 
       {/* Contact Section */}

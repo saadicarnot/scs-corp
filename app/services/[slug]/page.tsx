@@ -102,7 +102,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <JsonLd data={breadcrumbs} />
       <JsonLd data={webPage} />
       {/* Hero with breadcrumb */}
-      <section className="relative py-24 lg:py-32 gradient-navy noise-overlay">
+      <section className="relative py-24 lg:py-32 bg-navy z-10 shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)]">
         <div className="container-wide relative z-10">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-white/50 mb-8" aria-label="Breadcrumb">
@@ -110,23 +110,17 @@ export default async function ServiceDetailPage({ params }: Props) {
             <ChevronRight className="h-3.5 w-3.5" />
             <Link href="/services" className="hover:text-white/80 transition-colors">Services</Link>
             <ChevronRight className="h-3.5 w-3.5" />
-            <span className="text-white/80">{service.title}</span>
+            <span className="text-white" aria-current="page">{service.title}</span>
           </nav>
 
           <div className="max-w-3xl">
-            <p className="text-eyebrow text-accent-blue mb-4">{service.tagline}</p>
-            <h1 className="text-page-title text-white mb-5">{service.title}</h1>
-            <p className="text-body-lg text-white/70 mb-8">{service.fullDescription}</p>
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 h-12 px-7 bg-accent-blue text-white font-semibold rounded-xl hover:bg-accent-blue-hover hover:scale-[1.02] transition-all duration-250"
-            >
-              Get a Quote
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <p className="text-eyebrow text-accent-blue mb-4">Service Details</p>
+            <h1 className="text-page-title text-white mb-6">{service.title}</h1>
+            <p className="text-body-lg text-white/70 leading-relaxed">
+              {service.fullDescription}
+            </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-20" />
       </section>
 
       {/* What's Included */}
