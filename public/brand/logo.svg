@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <g>
+    <!-- Star icon -->
+    <path d="M20 4l4.9 10.2L36 15.8l-8 7.8 1.9 11.1L20 29.5l-9.9 5.2L12 23.6 4 15.8l11.1-1.6L20 4z" fill="#1E78FF"/>
+    <!-- SCS text -->
+    <text x="46" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#0A2540" letter-spacing="2">SCS</text>
+    <!-- CORP text -->
+    <text x="46" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#0A2540" letter-spacing="4">CORP</text>
+    <!-- Services Group line -->
+    <text x="105" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="400" fill="#5B6B7C" letter-spacing="1">SERVICES GROUP</text>
+  </g>
+</svg>
