@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   },
 };
 
+import DynamicBackground from "@/components/marketing/DynamicBackground";
+
 export default function HomePage() {
   const breadcrumbs = generateBreadcrumbSchema([
     { name: "Home", url: "/" },
@@ -50,8 +52,7 @@ export default function HomePage() {
       <ServicesGrid />
       <AboutPreview />
       <div className="bg-navy noise-overlay relative overflow-hidden">
-        {/* Unified radial gradient across both sections */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-blue/10 via-navy to-navy pointer-events-none" />
+        <DynamicBackground />
         <HowItWorks />
         <CTABanner />
       </div>
