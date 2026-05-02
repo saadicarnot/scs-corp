@@ -5,48 +5,38 @@ import { motion } from "framer-motion";
 export default function DynamicBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Animated Blobs */}
+      {/* Base Radial Glow - Matching user's image */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#122D4D_0%,_#0A2540_100%)]" />
+      
+      {/* Subtle Animated Blobs for depth */}
       <motion.div
         animate={{
-          x: [0, 100, 0],
-          y: [0, 50, 0],
-          scale: [1, 1.2, 1],
+          x: [0, 50, 0],
+          y: [0, 30, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute top-[-10%] left-[10%] w-[50%] h-[50%] bg-accent-blue/5 rounded-full blur-[120px]"
+      />
+      <motion.div
+        animate={{
+          x: [0, -40, 0],
+          y: [0, 60, 0],
         }}
         transition={{
           duration: 20,
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-accent-blue/10 rounded-full blur-[120px]"
-      />
-      <motion.div
-        animate={{
-          x: [0, -80, 0],
-          y: [0, 120, 0],
-          scale: [1.2, 1, 1.2],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute top-[20%] -right-[5%] w-[35%] h-[35%] bg-blue-600/5 rounded-full blur-[100px]"
-      />
-      <motion.div
-        animate={{
-          x: [0, 50, 0],
-          y: [0, -100, 0],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute bottom-[10%] left-[20%] w-[30%] h-[30%] bg-accent-blue/10 rounded-full blur-[110px]"
+        className="absolute bottom-[-5%] right-[15%] w-[45%] h-[45%] bg-accent-blue/5 rounded-full blur-[130px]"
       />
       
-      {/* Mesh Gradient Effect Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-navy/40 to-navy" />
+      {/* Noise Overlay (inherited from parent but adding extra depth here) */}
+      <div className="absolute inset-0 opacity-[0.15] noise-overlay" />
     </div>
   );
 }
