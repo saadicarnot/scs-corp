@@ -35,8 +35,6 @@ export default function DynamicBackground() {
         className="absolute bottom-[-5%] right-[15%] w-[45%] h-[45%] bg-accent-blue/5 rounded-full blur-[130px]"
       />
       
-      {/* Noise Overlay (inherited from parent but adding extra depth here) */}
-      <div className="absolute inset-0 opacity-[0.15] noise-overlay" />
     </div>
   );
 }

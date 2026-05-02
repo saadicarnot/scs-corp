@@ -51,7 +51,7 @@ export default function HomePage() {
       <Hero />
       <ServicesGrid />
       <AboutPreview />
-      <div className="bg-navy noise-overlay relative overflow-hidden">
+      <div className="bg-navy relative overflow-hidden">
         <DynamicBackground />
         <HowItWorks />
         <CTABanner />
