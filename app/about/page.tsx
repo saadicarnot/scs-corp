@@ -48,13 +48,14 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbs} />
       <JsonLd data={webPage} />
       {/* Hero */}
-      <section className="relative py-24 lg:py-32 gradient-navy noise-overlay">
+      <section className="relative py-24 lg:py-32 bg-navy overflow-hidden">
         <div className="container-wide relative z-10 text-center max-w-3xl mx-auto">
           <p className="text-eyebrow text-accent-blue mb-4">{ABOUT_CONTENT.heroEyebrow}</p>
           <h1 className="text-page-title text-white mb-5">{ABOUT_CONTENT.heroTitle}</h1>
           <p className="text-body-lg text-white/70">{ABOUT_CONTENT.heroSubtitle}</p>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-20" />
+        {/* Smoother transition to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white via-white/40 to-transparent z-20" />
       </section>
 
       {/* Stats strip */}
