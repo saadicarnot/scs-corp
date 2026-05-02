@@ -29,7 +29,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-navy text-white overflow-hidden">
+    <section className="relative py-24 text-white overflow-hidden">
       <div className="container-wide">
         <div className="text-center mb-20">
           <motion.span

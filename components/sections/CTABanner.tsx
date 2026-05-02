@@ -7,7 +7,7 @@ import SectionReveal from "@/components/marketing/SectionReveal";
 
 export default function CTABanner() {
   return (
-    <section className="relative py-20 lg:py-28 bg-navy noise-overlay overflow-hidden" id="cta-banner">
+    <section className="relative py-24 text-white overflow-hidden" id="cta-banner">
       <div className="max-w-4xl mx-auto px-4 md:px-8 relative z-10 text-center">
         <SectionReveal>
           {/* Rating Pill */}
@@ -47,9 +47,6 @@ export default function CTABanner() {
         </SectionReveal>
       </div>
 
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent-blue/20 via-navy to-navy pointer-events-none" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl" />
     </section>
   );
 }

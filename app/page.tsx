@@ -49,8 +49,12 @@ export default function HomePage() {
       <Hero />
       <ServicesGrid />
       <AboutPreview />
-      <HowItWorks />
-      <CTABanner />
+      <div className="bg-navy noise-overlay relative overflow-hidden">
+        {/* Unified radial gradient across both sections */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-accent-blue/10 via-navy to-navy pointer-events-none" />
+        <HowItWorks />
+        <CTABanner />
+      </div>
       <ServicePackages />
       <RecentProjects />
       <Testimonials />
